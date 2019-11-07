@@ -1,22 +1,37 @@
-.App {
+.wrapper {
+  background: chocolate;
+  padding: 20px 40px;
+  height: 100vh;
+}
+.master-card {
+  align-items: center;
+  background: cornsilk;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  height: 500px;
+  position: relative;
+}
+.master-card h3 {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
+.btn {
+  background: #868151;
+  padding: 20px 40px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cta-solution {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
-
-.App-link {
-  color: #09d3ac;
+.cta-question {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.viewbox {
+  min-width: 320px;
+  height: 530px;
+  overflow: hidden;
 }
