@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from './components/Card';
 import flashCardPack from "./data/flashCardPack";
+import {shuffle} from './components/Shuffle';
     
 class App extends Component {
   
@@ -14,21 +15,6 @@ class App extends Component {
   }
   render(){
     const { flashCardPack } = this.state;
-
-    const shuffle = function (flashCardPack) {
-      let currentIndex = flashCardPack.length;
-      let temporaryValue;
-      let randomIndex;
-
-	    while (0 !== currentIndex) {
-		    randomIndex = Math.floor(Math.random() * currentIndex);
-		    currentIndex = currentIndex - 1;
-		    temporaryValue = flashCardPack[currentIndex];
-        flashCardPack[currentIndex] = flashCardPack[randomIndex];
-        flashCardPack[randomIndex] = temporaryValue;
-	    }
-	    return flashCardPack;
-    };
 
     const shuffledCards = shuffle(flashCardPack.slice());
     const showNextCard = () => {
